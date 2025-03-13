@@ -12,17 +12,22 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - name: Setup pnpm 📦
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Set up Node.js ⚙️
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install dependencies 📦
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build 🔧
-        run: npm run build
+        run: pnpm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

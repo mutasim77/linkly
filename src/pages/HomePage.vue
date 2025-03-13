@@ -59,7 +59,7 @@
         <section class="mb-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
                 <div class="w-full md:w-auto">
-                    <SearchBar v-model="searchQuery" @update:modelValue="handleSearchUpdate" />
+                    <SearchBar v-model="searchQuery" />
                 </div>
 
                 <DropdownMenu>

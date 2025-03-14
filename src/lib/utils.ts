@@ -16,9 +16,10 @@ export const formatDate = (dateString: string): string => {
 
 export const formatUrl = (url: string): string => {
   try {
-    const urlObj = new URL(url);
-    return urlObj.hostname + (urlObj.pathname !== '/' ? urlObj.pathname : '');
-  } catch (e) {
+    const hostname = new URL(url).hostname.replace(/^www\./, "");
+    const parts = hostname.split(".");
+    return parts.length > 2 ? parts.slice(-2).join(".") : hostname;
+  } catch {
     return url;
   }
 }

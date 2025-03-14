@@ -21,7 +21,7 @@ Linkly is a simple, elegant way to store and organize all your important links i
 - 🖼️ **Link previews** - With rich thumbnails for YouTube and other media sites
 
 ## Live Demo
-Check out Linkly in action at [https://mutasim77.github.io/linkly](https://mutasim77.github.io/linkly)
+Check out Linkly in action at [linkly](https://linkly.fyi)
 
 ## Preview
 ![Linkly Homepage](/public/home-page.png)
